@@ -1,0 +1,11 @@
+<?php
+	$sql = "INSERT INTO `student`(`name`, `username`, `roll_no`) VALUES ('krish','krishmakraiye','202301103143')";
+	$sql = mysqli_query($conn, $sql);
+	
+	if($sql){
+		echo'succesfully executed query';
+	}
+	else{
+		echo "error";
+	}
+?>
