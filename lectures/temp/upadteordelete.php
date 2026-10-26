@@ -29,6 +29,16 @@ include('connection.php');
 				}
 			}
 			*/
+			
+			function updatedata(){
+					if(mysqli_num_rows($sql) > 0){
+						while($data = mysqli_fetch_assoc($sql)){
+					
+						}
+					}
+					
+					
+					
 		?>
 		<table style="width: 50%; border-collapse: collapse;">
 			<tr>
@@ -41,6 +51,12 @@ include('connection.php');
 				<th>
 					roll no
 				</th>
+				<th>
+					update
+				</th>
+				<th>
+					delete
+				</th>
 			</tr>
 			
 			
@@ -52,7 +68,7 @@ include('connection.php');
 				<td style= "padding-left:5%; "> <?php echo $data['name']; ?></td>
 				<td style= "padding-left:5%; "> <?php echo $data['username']; ?></td>
 				<td style= "padding-left:5%; "> <?php echo $data['roll_no']; ?></td>
-				
+				<td style= "padding-left:5%; "> <button onclick="window.location.href='updatepage.php';"></button></td>				
 			</tr>
 			<?php
 					}
